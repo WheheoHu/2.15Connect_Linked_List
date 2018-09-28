@@ -2,10 +2,12 @@
 #include <iostream>
 
 
+
 template<class T>
 class Linear_Linked_List
 {
 public:
+	
 	Linear_Linked_List();
 	Linear_Linked_List(T elem);
 	~Linear_Linked_List();
@@ -18,26 +20,26 @@ public:
 	int ListInsert(int location, T elem);
 	int ListDelete(int location, T& elem);
 	int ListDelete(int location);
-
+	
 private:
 	struct Node {
-		         T data;
-		         Node * next;
-		         Node(const T &d) :data(d), next(NULL) {}	
+		T data;
+		Node * next;
+		Node(const T &d) :data(d), next(NULL) {}
 	};
 	Node * head;
 	//寻找第location个Node前一个Node的位置！！！！
 	Node * find(const int &location) {
-		Node *locaNode = head;
+		Node *locateNode = head;
 		if (location==1)
 		{
-			return locaNode;
+			return locateNode;
 		}
 		for (int i = 0; i < location-2; i++)
 		{
-			locaNode = locaNode->next;
+			locateNode = locateNode->next;
 		}
-		return locaNode;
+		return locateNode;
 	}
 };
 
@@ -208,4 +210,3 @@ inline int Linear_Linked_List<T>::ListDelete(int location)
 	tempNode = NULL;
 	return 1;
 }
-
