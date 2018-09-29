@@ -6,11 +6,13 @@ const int m = 3;
 const int n = 20;
 
 
-//没时间写接口注释了
+//没时间写接口注释了（其实是懒
+
 int main() {
 	//初始化两个链表
 	Linear_Linked_List<int> LLList_a(0);
 	Linear_Linked_List<int> LLList_b(0);
+
 	for (int i = 0; i < m-1; i++)
 	{
 		LLList_a.ListInsert(i + 2, i + 1);
@@ -19,11 +21,12 @@ int main() {
 	{
 		LLList_b.ListInsert(i + 2, i + 1);
 	}
+
+	//连接两个单链表
 	Node<int> *headpoint_c = LLList_a.HeadPoint;
 	Node<int> *endpoint_a = LLList_a.getEndPoint();
 	endpoint_a->next = LLList_b.HeadPoint;
 	
-
 
 
 	//安全销毁
