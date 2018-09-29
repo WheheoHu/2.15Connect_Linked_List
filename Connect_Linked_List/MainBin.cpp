@@ -6,7 +6,7 @@ const int m = 3;
 const int n = 20;
 
 
-
+//没时间写接口注释了
 int main() {
 	//初始化两个链表
 	Linear_Linked_List<int> LLList_a(0);
