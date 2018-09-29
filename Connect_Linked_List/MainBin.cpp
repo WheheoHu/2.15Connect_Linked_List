@@ -25,6 +25,7 @@ int main() {
 	
 
 
+
 	//°²È«Ïú»Ù
 	endpoint_a->next = NULL;
 
