@@ -2,7 +2,7 @@
 #include "linearlinkedlist.h"
 
 //两个链表长度分别为m,n
-const int m = 10;
+const int m = 3;
 const int n = 20;
 
 
@@ -19,7 +19,15 @@ int main() {
 	{
 		LLList_b.ListInsert(i + 2, i + 1);
 	}
+	Node<int> *headpoint_c = LLList_a.HeadPoint;
+	Node<int> *endpoint_a = LLList_a.getEndPoint();
+	endpoint_a->next = LLList_b.HeadPoint;
 	
+
+
+	//安全销毁
+	endpoint_a->next = NULL;
+
 
 	system("pause");
 }
